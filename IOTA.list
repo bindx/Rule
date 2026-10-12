@@ -1,15 +1,19 @@
-# IOTA API and Train at Home control services
-# Verified against observed requests and the installed vendor app on 2026-10-12.
-# Surge RULE-SET format: the DIRECT policy belongs on the profile's RULE-SET line.
-# Exact hosts only; storage and P2P relay services are deliberately not included.
-
-# Worker orchestration API (observed in Surge requests)
+# IOTA API、控制服务、已观察到的存储主机及 P2P 中继规则
+# 更新日期：2026-10-13；依据实际请求、日志及已安装的官方应用整理。
+# 使用 Surge RULE-SET 格式；DIRECT 策略应写在配置文件的 RULE-SET 引用行中。
+# 服务主机采用精确匹配；DigitalOcean Spaces 和 Iroh 中继按用户要求采用域名后缀匹配。
+# 不覆盖动态对等节点的 IP／UDP 流量，也不保证覆盖未来出现的其他域名。
+# Worker 任务调度 API（已在 Surge 请求记录中观察到）
 DOMAIN,iota.api.macrocosmos.ai
-
-# Dashboard API and Subnet 9 API (present in the installed vendor app)
+# 仪表盘 API 和子网 9 API（已安装的官方应用中包含这些地址）
 DOMAIN,iota-web.api.macrocosmos.ai
 DOMAIN,sn9.api.macrocosmos.ai
-
-# Train at Home control, downloads and registration service
+# Train at Home 控制、下载及注册服务
 DOMAIN,tah.iota.macrocosmos.ai
-
+# 已在 H08 和本机 IOTA 请求中观察到的存储主机
+DOMAIN,c3e628c65898759897b33b55e56bb7a0.r2.cloudflarestorage.com
+# Iroh P2P 中继域：覆盖已观察到的主机及此后缀下未来新增的主机。
+# 不匹配动态对等节点 IP，也不覆盖其他 Iroh 中继域。
+DOMAIN-SUFFIX,relay.n0.iroh-canary.iroh.link
+# 按用户明确要求，匹配 DigitalOcean Spaces 域名及其所有子域名。
+DOMAIN-SUFFIX,digitaloceanspaces.com
