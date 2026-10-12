@@ -17,3 +17,5 @@ DOMAIN,c3e628c65898759897b33b55e56bb7a0.r2.cloudflarestorage.com
 DOMAIN-SUFFIX,relay.n0.iroh-canary.iroh.link
 # 按用户明确要求，匹配 DigitalOcean Spaces 域名及其所有子域名。
 DOMAIN-SUFFIX,digitaloceanspaces.com
+#自节点
+DOMAIN-SUFFIX,relay.n0.iroh-canary.iroh.link
