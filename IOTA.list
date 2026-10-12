@@ -1,0 +1,15 @@
+# IOTA API and Train at Home control services
+# Verified against observed requests and the installed vendor app on 2026-10-12.
+# Surge RULE-SET format: the DIRECT policy belongs on the profile's RULE-SET line.
+# Exact hosts only; storage and P2P relay services are deliberately not included.
+
+# Worker orchestration API (observed in Surge requests)
+DOMAIN,iota.api.macrocosmos.ai
+
+# Dashboard API and Subnet 9 API (present in the installed vendor app)
+DOMAIN,iota-web.api.macrocosmos.ai
+DOMAIN,sn9.api.macrocosmos.ai
+
+# Train at Home control, downloads and registration service
+DOMAIN,tah.iota.macrocosmos.ai
+
